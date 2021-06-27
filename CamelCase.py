@@ -21,3 +21,8 @@ print(camel_case('Basic tests'))
 # print(solve(words))
 
 
+#----------------Optimized--------------------#
+def CamelCase(string):
+    return string.title().replace(" ","")
+
+print(CamelCase('gloria edumaba
