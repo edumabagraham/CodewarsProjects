@@ -1,16 +1,14 @@
 #Product of consecutive Fibonacci numbers
-
-# def productFib(prod):
-#     return
-
 def productFib(prod):
     fibSequence = fib(prod)
-    arr = []
+
     for i in range(1,len(fibSequence)):
-        for x in range(1,len(fibSequence)):
-         if i * x == prod:
-            arr.append(i)
-    return arr
+        # for x in range(1,len(fibSequence)):
+         if fibSequence[i] * fibSequence[i+1] == prod:
+             return ([fibSequence[i],fibSequence[i+1],True])
+         elif fibSequence[i] * fibSequence[i+1] > prod:
+             return ([fibSequence[i],fibSequence[i+1],False])
+
 
 def fib(n):
     fibonacciSeries =[0,1]
@@ -19,4 +17,4 @@ def fib(n):
                 nextNumber = fibonacciSeries[i-1] + fibonacciSeries[i-2]
                 fibonacciSeries.append(nextNumber)
     return fibonacciSeries
-print(productFib(4895))
+print(productFib(5895))
