@@ -17,19 +17,21 @@ def first(str):
                 count = 0
             else:
                 return i
-            # break
+            break
 
 
 string = 'aa'
 print(first_non_repeating_letter(string))
-# print(first_non_repeating_letter(str))
-# string = ''
-# count = 0
-# for i in str:
-#     # count += 1
-#     string += i
-#     for j in str[1:]:
-#         if string == j:
-#             count += 1
 
-# print(count)
+
+
+str = 'sTreSS'
+
+
+def first(string):
+    stringLow = string.lower()
+    for i, j in enumerate(stringLow):
+        if stringLow.count(j) == 1:
+            return string[i]
+    return ''
+print(first(str))
